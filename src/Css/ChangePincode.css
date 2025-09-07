@@ -1,0 +1,14 @@
+.change__pincode {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+.change__pincode > span {
+  color: blue;
+  margin-left: 10px;
+  cursor: pointer;
+}

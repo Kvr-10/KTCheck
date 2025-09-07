@@ -1,0 +1,434 @@
+/* Modern Form Styles with Validation */
+
+/* Form Container */
+.cart__pickup__input {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Form Row Layout */
+.cart__pickup__input > .input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Single column for certain fields */
+.cart__pickup__input > .input.order-notes-row {
+  grid-template-columns: 1fr;
+}
+
+/* Order Notes field spans full width */
+.cart__pickup__input > .input.order-notes-row > div {
+  grid-column: 1 / -1;
+}
+
+/* Form Field Container */
+.cart__pickup__input > .input > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modern Label with Required Indicator */
+.cart__pickup__input > .input > div > label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.025em;
+}
+
+/* Required asterisk */
+.cart__pickup__input > .input > div > label::after {
+  content: " *";
+  color: #ef4444;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* Remove asterisk from optional fields */
+.cart__pickup__input > .input > div > label[data-optional]::after,
+.cart__pickup__input > .input > div:has(input[name="order_note"]) > label::after,
+.cart__pickup__input > .input > div:has(input[name="digipin"]) > label::after {
+  display: none;
+}
+
+/* Modern Input Styles */
+.cart__pickup__input > .input > div > input,
+.cart__pickup__input > .input > div > select,
+.cart__pickup__input > .input > div > textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Consistent height for inputs and selects */
+.cart__pickup__input > .input > div > input,
+.cart__pickup__input > .input > div > select {
+  height: 48px;
+}
+
+/* Ensure all input containers have consistent width */
+.cart__pickup__input > .input > div {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Specific fixes for phone number and time slot fields */
+.cart__pickup__input > .input > div > input[name="phone"],
+.cart__pickup__input > .input > div > select[name="pickup_time"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 48px !important;
+  box-sizing: border-box !important;
+}
+
+/* Additional targeting for phone input by type */
+.cart__pickup__input > .input > div > input[type="tel"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 48px !important;
+  box-sizing: border-box !important;
+}
+
+/* Focus State */
+.cart__pickup__input > .input > div > input:focus,
+.cart__pickup__input > .input > div > select:focus,
+.cart__pickup__input > .input > div > textarea:focus {
+  outline: none;
+  border-color: #56b124;
+  box-shadow: 0 0 0 3px rgba(86, 177, 36, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Hover State */
+.cart__pickup__input > .input > div > input:hover:not(:disabled),
+.cart__pickup__input > .input > div > select:hover:not(:disabled),
+.cart__pickup__input > .input > div > textarea:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+
+/* Disabled State */
+.cart__pickup__input > .input > div > input:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+/* Make certain disabled fields look like filled valid inputs (green) */
+.cart__pickup__input > .input > div > input.filled-disabled:disabled,
+.cart__pickup__input > .input > div > textarea.filled-disabled:disabled,
+.cart__pickup__input > .input > div > select.filled-disabled:disabled {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+  color: inherit;
+}
+
+/* Valid State */
+.cart__pickup__input > .input > div > input:valid:not(:placeholder-shown),
+.cart__pickup__input > .input > div > select:valid,
+.cart__pickup__input > .input > div > select:valid {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+.cart__pickup__input > .input > div > textarea:valid:not(:placeholder-shown) {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+/* Invalid State */
+.cart__pickup__input > .input > div > input:invalid:not(:placeholder-shown),
+.cart__pickup__input > .input > div > select:invalid,
+.cart__pickup__input > .input > div > textarea:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* Textarea Specific Styles */
+.cart__pickup__input > .input > div > textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Select Specific Styles */
+.cart__pickup__input > .input > div > select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+  appearance: none;
+}
+
+/* Date Input Specific Styles */
+.cart__pickup__input > .input > div > input[type="date"] {
+  position: relative;
+}
+
+.cart__pickup__input > .input > div > input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* Custom Date Picker Styles */
+.custom-date-picker {
+  border: 2px solid #dc2626; /* Match the red border */
+  border-radius: 14px;
+  padding: 0.7rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fef2f2; /* Match the light red background */
+  color: #000; /* Ensure text is visible */
+}
+
+.custom-date-picker:focus {
+  outline: none;
+  border-color: #10b981; /* Green border on focus */
+  background-color: #eefbeeff; /* Light green background on focus */
+}
+
+/* Date Picker with Selected Date */
+.custom-date-picker.date-selected {
+  border-color: #10b981; /* Green border when date is selected */
+  background-color: #f0fdf4; /* Light green background when date is selected */
+}
+
+/* Digipin Input Wrapper with Embedded Button */
+.digipin-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Digipin Input Field */
+.digipin-input-wrapper input {
+  width: 100%;
+  padding: 12px 50px 12px 16px; /* Extra padding on right for button */
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.digipin-input-wrapper input:focus {
+  outline: none;
+  border-color: #56b124;
+  box-shadow: 0 0 0 3px rgba(86, 177, 36, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  background-color: #fff;
+}
+
+.digipin-input-wrapper input:hover:not(:disabled) {
+  border-color: #9ca3af;
+}
+
+.digipin-input-wrapper input:disabled {
+  background-color: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+  border-color: #e5e7eb;
+}
+
+.digipin-input-wrapper input:valid:not(:placeholder-shown) {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.digipin-input-wrapper input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+/* When input is focused, make sure button doesn't interfere */
+.digipin-input-wrapper input:focus + .digipin-locate-btn {
+  z-index: 1;
+}
+
+/* Digipin Location Button (embedded in input) */
+.digipin-locate-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #56b124 0%, #4a9c1f 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(86, 177, 36, 0.2);
+  z-index: 2;
+}
+
+.digipin-locate-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4a9c1f 0%, #3d8319 100%);
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 8px rgba(86, 177, 36, 0.3);
+}
+
+.digipin-locate-btn:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.digipin-locate-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+  box-shadow: none;
+}
+
+/* Loading Spinner */
+.digipin-locate-btn .spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Validation Messages */
+.field-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-success {
+  color: #10b981;
+  font-size: 12px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart__pickup__input {
+    padding: 0 16px;
+  }
+  
+  .cart__pickup__input > .input {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .cart__pickup__input > .input > div > input,
+  .cart__pickup__input > .input > div > select,
+  .cart__pickup__input > .input > div > textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .digipin-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .digipin-auto-detect-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart__pickup__input {
+    padding: 0 12px;
+  }
+  
+  .cart__pickup__input > .input {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .cart__pickup__input > .input > div > input,
+  .cart__pickup__input > .input > div > select,
+  .cart__pickup__input > .input > div > textarea {
+    padding: 10px 14px;
+  }
+}
+
+/* Form Animation */
+.cart__pickup__input > .input > div {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cart__pickup__input > .input > div > input,
+  .cart__pickup__input > .input > div > select,
+  .cart__pickup__input > .input > div > textarea {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .cart__pickup__input > .input > div > input,
+  .cart__pickup__input > .input > div > select,
+  .cart__pickup__input > .input > div > textarea,
+  .digipin-auto-detect-btn {
+    transition: none;
+  }
+  
+  .cart__pickup__input > .input > div {
+    animation: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: none; }
+    100% { transform: none; }
+  }
+}

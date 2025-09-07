@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+.user__dealer__wallet__history__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  border-radius: 20px;
+  width: 45%;
+  max-width: 600px;
+  margin-bottom: 30px;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+.user__dealer__wallet__history__card > .left__side > img {
+  width: 70px;
+  height: 70px;
+}
+.user__dealer__wallet__history__card > .right__side {
+  width: 70%;
+  text-align: left;
+}
+.user__dealer__wallet__history__card > .right__side > p {
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.user__dealer__wallet__history__card > .right__side > p > span {
+  color: #777777;
+  font-size: 1.05rem;
+  font-family: "Noto Serif", serif;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .user__dealer__wallet__history__card {
+    width: 55%;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .user__dealer__wallet__history__card {
+    width: 75%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__dealer__wallet__history__card {
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 90%;
+  }
+  .user__dealer__wallet__history__card > .right__side {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .user__dealer__wallet__history__card {
+    padding: 30px 20px;
+  }
+}

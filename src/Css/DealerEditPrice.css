@@ -1,0 +1,54 @@
+/* dealer edit price */
+.dealer__edit__price > button {
+  margin: 0 10px;
+  padding: 12px 40px;
+  background-color: #56b124;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  border: none !important;
+  outline: none !important;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+.dealer__edit__price > button:hover {
+  background-color: #05242a;
+}
+.dealer__price__list {
+  color: black;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.dealer__price__list:hover {
+  color: #56b124;
+  cursor: pointer;
+}
+
+/* edit price */
+.edit__price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+  width: 100%;
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* dealer edit price */
+  .dealer__edit__price > button {
+    margin-bottom: 40px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* dealer edit price */
+  .dealer__edit__price > button {
+    margin-bottom: 30px;
+  }
+}

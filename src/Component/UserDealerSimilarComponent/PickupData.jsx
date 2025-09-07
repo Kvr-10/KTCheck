@@ -1,0 +1,58 @@
+export const PickupData = [
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Successful",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Pending",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Successful",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Cancel",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Cancel",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Successful",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Pending",
+  },
+  {
+    title: "Selling your scrap",
+    uniqueId: "abcd0123456789",
+    date: "23rd june 2021",
+    time: "5:00 pm",
+    status: "Cancel",
+  },
+];

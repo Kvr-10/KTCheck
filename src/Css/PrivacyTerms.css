@@ -1,0 +1,58 @@
+.privacy__terms {
+  max-width: 1300px;
+  margin: 60px auto 80px;
+  width: 100%;
+  padding: 0 50px;
+}
+.privacy__terms > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.privacy__terms > span {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.privacy__terms > .privacy__terms__section > h1 {
+  font-size: 1.4rem;
+  margin: 40px 0 10px;
+}
+.privacy__terms > .privacy__terms__section > p {
+  margin: 10px 0;
+}
+.privacy__terms > .privacy__terms__section > ul {
+  margin-left: 20px;
+}
+.privacy__terms > .privacy__terms__section > p,
+.privacy__terms > .privacy__terms__section > ul > li {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #555555;
+}
+.privacy__terms > .privacy__terms__section > p > span {
+  font-weight: bold;
+  color: #000;
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .privacy__terms {
+    margin: 30px auto 60px;
+    padding: 0 20px;
+  }
+  .privacy__terms > h1 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .privacy__terms > span {
+    text-align: left;
+  }
+  .privacy__terms > .privacy__terms__section > p,
+  .privacy__terms > .privacy__terms__section > ul > li {
+    text-align: left;
+  }
+}

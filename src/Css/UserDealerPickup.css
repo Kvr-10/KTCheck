@@ -1,0 +1,311 @@
+.user__dealer__pickup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pickup-table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.pickup-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.pickup-table th,
+.pickup-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pickup-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.pickup-table td {
+  color: #555;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pagination-info {
+  flex: 1;
+  color: #666;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pagination-buttons button {
+  padding: 6px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pagination-buttons button:hover {
+  background-color: #f2f2f2;
+}
+
+.pagination-buttons button.active {
+  border-color: #6a11cb;
+  color: #6a11cb;
+  font-weight: bold;
+  background-color: #f3e8ff;
+}
+
+.pagination-buttons span {
+  padding: 0 4px;
+  color: #999;
+}
+
+.pagination-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-select select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Design */
+
+/* 1024px - Large Tablet */
+@media only screen and (max-width: 1024px) {
+  .pickup-table-container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+
+  .pickup-table {
+    min-width: 700px;
+  }
+
+  .pickup-table th,
+  .pickup-table td {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .pagination-wrapper {
+    padding: 10px 12px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination-info {
+    text-align: center;
+  }
+
+  .pagination-buttons {
+    justify-content: center;
+  }
+}
+
+/* 768px - Tablet Portrait */
+@media only screen and (max-width: 768px) {
+  .pickup-table-container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .pickup-table {
+    min-width: 600px;
+    font-size: 0.9rem;
+  }
+
+  .pickup-table th,
+  .pickup-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .pickup-table th {
+    font-size: 0.85rem;
+  }
+
+  .pagination-wrapper {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .pagination-buttons button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  .pagination-select select {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}
+
+/* 480px - Mobile Landscape */
+@media only screen and (max-width: 480px) {
+  .user__dealer__pickup {
+    padding: 0 10px;
+  }
+
+  .pickup-table-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .pickup-table {
+    min-width: 100%;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .pickup-table th,
+  .pickup-table td {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .pickup-table th {
+    font-size: 0.75rem;
+    background-color: #f5f5f5;
+  }
+
+  /* Action buttons - keep side by side on mobile */
+  .pickup-table td:last-child > div {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 3px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pickup-table td:last-child button {
+    padding: 1px 2px !important;
+    font-size: 10px !important;
+    min-width: 45px !important;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* Stack pagination elements vertically on mobile */
+  .pagination-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .pagination-info {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .pagination-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .pagination-buttons button {
+    padding: 4px 6px;
+    font-size: 11px;
+    min-width: 30px;
+  }
+
+  .pagination-select {
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  .pagination-select select {
+    padding: 2px 4px;
+    font-size: 11px;
+  }
+
+  /* Add horizontal scroll indicator */
+  .pickup-table-container::after {
+    content: "← Scroll horizontally to see more →";
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 6px 6px;
+  }
+}
+
+/* 360px - Mobile Portrait */
+@media only screen and (max-width: 360px) {
+  .user__dealer__pickup {
+    padding: 0 5px;
+  }
+
+  .pickup-table th,
+  .pickup-table td {
+    padding: 5px 6px;
+    font-size: 0.75rem;
+  }
+
+  .pickup-table th {
+    font-size: 0.7rem;
+  }
+
+  .pagination-wrapper {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .pagination-buttons button {
+    padding: 3px 5px;
+    font-size: 10px;
+    min-width: 25px;
+  }
+
+  .pagination-select select {
+    padding: 1px 3px;
+    font-size: 10px;
+  }
+}

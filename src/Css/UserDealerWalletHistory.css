@@ -1,0 +1,9 @@
+.user__dealer__wallet__history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user__dealer__wallet__history > p {
+  font-size: 1.1rem;
+}

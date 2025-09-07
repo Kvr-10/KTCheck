@@ -1,0 +1,408 @@
+/* Responsive Form Enhancements for Kabadi Techno */
+
+/* ===== GLOBAL FORM STYLES ===== */
+.form-container-responsive {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title-responsive {
+  font-size: 2rem;
+  color: #05242a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.form-group-responsive {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-label-responsive {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-input-responsive {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 50px;
+}
+
+.form-input-responsive:focus {
+  outline: none;
+  border-color: #56b124;
+  box-shadow: 0 0 0 3px rgba(86, 177, 36, 0.1);
+}
+
+.form-input-responsive::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.form-select-responsive {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 50px;
+}
+
+.form-select-responsive:focus {
+  outline: none;
+  border-color: #56b124;
+  box-shadow: 0 0 0 3px rgba(86, 177, 36, 0.1);
+}
+
+.form-textarea-responsive {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-textarea-responsive:focus {
+  outline: none;
+  border-color: #56b124;
+  box-shadow: 0 0 0 3px rgba(86, 177, 36, 0.1);
+}
+
+.form-button-responsive {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #56b124, #78d347);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-height: 50px;
+}
+
+.form-button-responsive:hover {
+  background: linear-gradient(135deg, #4a9b1f, #69c43a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(86, 177, 36, 0.3);
+}
+
+.form-button-responsive:active {
+  transform: translateY(0);
+}
+
+.form-button-responsive:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-error-responsive {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-success-responsive {
+  color: #27ae60;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* ===== CHECKBOX AND RADIO STYLES ===== */
+.form-checkbox-group-responsive,
+.form-radio-group-responsive {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.form-checkbox-responsive,
+.form-radio-responsive {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-checkbox-label-responsive,
+.form-radio-label-responsive {
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* ===== FILE UPLOAD STYLES ===== */
+.form-file-responsive {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-file-input-responsive {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+
+.form-file-label-responsive {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+  font-size: 1rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-file-label-responsive:hover {
+  background-color: #e9ecef;
+  border-color: #56b124;
+  color: #56b124;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .form-container-responsive {
+    max-width: 450px;
+    padding: 25px;
+  }
+  
+  .form-title-responsive {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .form-group-responsive {
+    margin-bottom: 18px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .form-container-responsive {
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 15px;
+  }
+  
+  .form-title-responsive {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-input-responsive,
+  .form-select-responsive,
+  .form-textarea-responsive {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .form-button-responsive {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 480px) {
+  .form-container-responsive {
+    max-width: 100%;
+    padding: 20px 15px;
+    margin: 0 10px;
+    border-radius: 10px;
+  }
+  
+  .form-title-responsive {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-group-responsive {
+    margin-bottom: 16px;
+  }
+  
+  .form-input-responsive,
+  .form-select-responsive,
+  .form-textarea-responsive {
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  .form-button-responsive {
+    padding: 16px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  
+  .form-textarea-responsive {
+    min-height: 100px;
+  }
+  
+  .form-checkbox-group-responsive,
+  .form-radio-group-responsive {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 360px) {
+  .form-container-responsive {
+    padding: 15px 10px;
+    margin: 0 5px;
+  }
+  
+  .form-title-responsive {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-group-responsive {
+    margin-bottom: 14px;
+  }
+  
+  .form-input-responsive,
+  .form-select-responsive,
+  .form-textarea-responsive {
+    padding: 12px 14px;
+  }
+  
+  .form-button-responsive {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== FORM GRID LAYOUTS ===== */
+.form-row-responsive {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-col-responsive {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .form-row-responsive {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-col-responsive {
+    margin-bottom: 16px;
+  }
+  
+  .form-col-responsive:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ===== LOADING STATES ===== */
+.form-button-loading-responsive {
+  position: relative;
+  color: transparent;
+}
+
+.form-button-loading-responsive::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  .form-input-responsive,
+  .form-select-responsive,
+  .form-textarea-responsive,
+  .form-button-responsive,
+  .form-file-label-responsive {
+    transition: none;
+  }
+  
+  .form-button-loading-responsive::after {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .form-input-responsive,
+  .form-select-responsive,
+  .form-textarea-responsive {
+    border-width: 3px;
+  }
+  
+  .form-button-responsive {
+    border: 2px solid #000;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+.form-input-responsive:focus-visible,
+.form-select-responsive:focus-visible,
+.form-textarea-responsive:focus-visible,
+.form-button-responsive:focus-visible {
+  outline: 3px solid #56b124;
+  outline-offset: 2px;
+}

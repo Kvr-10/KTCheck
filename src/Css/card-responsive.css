@@ -1,0 +1,602 @@
+/* Responsive Card and Component Enhancements for Kabadi Techno */
+
+/* ===== CARD COMPONENTS ===== */
+.card-responsive {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.card-responsive:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header-responsive {
+  padding: 20px;
+  background: linear-gradient(135deg, #05242a, #0a3a42);
+  color: #fff;
+}
+
+.card-title-responsive {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.card-subtitle-responsive {
+  font-size: 1rem;
+  color: #b8dcc8;
+  margin: 5px 0 0;
+}
+
+.card-body-responsive {
+  padding: 20px;
+}
+
+.card-content-responsive {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card-footer-responsive {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-image-responsive {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== PRICING CARDS ===== */
+.pricing-card-responsive {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.pricing-card-responsive:hover {
+  transform: scale(1.02);
+  border-color: #56b124;
+  box-shadow: 0 10px 40px rgba(86, 177, 36, 0.2);
+}
+
+.pricing-card-featured-responsive {
+  border-color: #56b124;
+  transform: scale(1.05);
+}
+
+.pricing-header-responsive {
+  background: linear-gradient(135deg, #56b124, #78d347);
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.pricing-title-responsive {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.pricing-price-responsive {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.pricing-period-responsive {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.pricing-features-responsive {
+  padding: 30px 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.pricing-feature-responsive {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.pricing-feature-responsive:last-child {
+  border-bottom: none;
+}
+
+/* ===== TESTIMONIAL CARDS ===== */
+.testimonial-card-responsive {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+.testimonial-quote-responsive {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author-responsive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.testimonial-avatar-responsive {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-info-responsive {
+  text-align: left;
+}
+
+.testimonial-name-responsive {
+  font-weight: 600;
+  color: #05242a;
+  margin: 0;
+}
+
+.testimonial-role-responsive {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 2px 0 0;
+}
+
+/* ===== FEATURE CARDS ===== */
+.feature-card-responsive {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f5f5f5;
+}
+
+.feature-card-responsive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon-responsive {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #56b124, #78d347);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.feature-title-responsive {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #05242a;
+  margin: 0 0 15px;
+}
+
+.feature-description-responsive {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* ===== STATS CARDS ===== */
+.stats-card-responsive {
+  background: linear-gradient(135deg, #05242a, #0a3a42);
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-card-responsive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #56b124, #78d347);
+}
+
+.stats-number-responsive {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #56b124;
+  margin: 0 0 5px;
+}
+
+.stats-label-responsive {
+  font-size: 1rem;
+  color: #b8dcc8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large Tablet - 1024px */
+@media (max-width: 1024px) {
+  .card-responsive {
+    border-radius: 12px;
+  }
+  
+  .card-header-responsive,
+  .card-body-responsive {
+    padding: 18px;
+  }
+  
+  .card-title-responsive {
+    font-size: 1.4rem;
+  }
+  
+  .pricing-header-responsive {
+    padding: 25px 18px;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 2.5rem;
+  }
+  
+  .feature-icon-responsive {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .stats-number-responsive {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablet Portrait - 768px */
+@media (max-width: 768px) {
+  .card-responsive {
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card-header-responsive,
+  .card-body-responsive {
+    padding: 15px;
+  }
+  
+  .card-title-responsive {
+    font-size: 1.3rem;
+  }
+  
+  .card-footer-responsive {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .pricing-card-responsive {
+    border-radius: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .pricing-header-responsive {
+    padding: 20px 15px;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 2.2rem;
+  }
+  
+  .testimonial-author-responsive {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .testimonial-info-responsive {
+    text-align: center;
+  }
+  
+  .feature-card-responsive {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-icon-responsive {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .stats-card-responsive {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .stats-number-responsive {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Landscape - 480px */
+@media (max-width: 480px) {
+  .card-responsive {
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card-header-responsive,
+  .card-body-responsive {
+    padding: 12px;
+  }
+  
+  .card-title-responsive {
+    font-size: 1.2rem;
+  }
+  
+  .card-image-responsive {
+    height: 150px;
+  }
+  
+  .pricing-card-responsive {
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card-responsive:hover {
+    transform: none;
+  }
+  
+  .pricing-card-featured-responsive {
+    transform: none;
+  }
+  
+  .pricing-header-responsive {
+    padding: 18px 12px;
+  }
+  
+  .pricing-title-responsive {
+    font-size: 1.3rem;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 2rem;
+  }
+  
+  .pricing-features-responsive {
+    padding: 20px 12px;
+  }
+  
+  .testimonial-card-responsive {
+    padding: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-quote-responsive {
+    font-size: 1rem;
+  }
+  
+  .testimonial-avatar-responsive {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .feature-card-responsive {
+    padding: 18px;
+    border-radius: 10px;
+  }
+  
+  .feature-icon-responsive {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .feature-title-responsive {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description-responsive {
+    font-size: 0.9rem;
+  }
+  
+  .stats-card-responsive {
+    padding: 18px;
+    border-radius: 12px;
+  }
+  
+  .stats-number-responsive {
+    font-size: 1.8rem;
+  }
+  
+  .stats-label-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Portrait - 360px */
+@media (max-width: 360px) {
+  .card-header-responsive,
+  .card-body-responsive {
+    padding: 10px;
+  }
+  
+  .card-title-responsive {
+    font-size: 1.1rem;
+  }
+  
+  .pricing-header-responsive {
+    padding: 15px 10px;
+  }
+  
+  .pricing-title-responsive {
+    font-size: 1.2rem;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 1.8rem;
+  }
+  
+  .testimonial-card-responsive {
+    padding: 15px;
+  }
+  
+  .feature-card-responsive {
+    padding: 15px;
+  }
+  
+  .feature-icon-responsive {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .feature-title-responsive {
+    font-size: 1.1rem;
+  }
+  
+  .stats-card-responsive {
+    padding: 15px;
+  }
+  
+  .stats-number-responsive {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== CARD GRID LAYOUTS ===== */
+.card-grid-1-responsive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card-grid-2-responsive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card-grid-3-responsive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-grid-4-responsive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .card-grid-4-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card-grid-3-responsive,
+  .card-grid-2-responsive {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid-4-responsive,
+  .card-grid-3-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card-grid-2-responsive,
+  .card-grid-3-responsive,
+  .card-grid-4-responsive {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid-4-responsive,
+  .card-grid-3-responsive,
+  .card-grid-2-responsive {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ===== LOADING STATES ===== */
+.card-loading-responsive {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.card-skeleton-responsive {
+  background: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-skeleton-responsive::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: shimmer 2s infinite;
+  content: '';
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

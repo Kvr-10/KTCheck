@@ -1,0 +1,316 @@
+.dealer__price__item__card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  margin: 15px auto;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 18px;
+  background: #fff;
+}
+
+.details__section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.details__section > .img {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.details__section > .img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details__section > .details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.details__section > .details > h1 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.details__section > .details > .details__heading {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.price__section__section {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.price__list {
+  width: 100%;
+}
+
+.same__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.same__price input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.0);
+}
+
+.same__price p {
+  margin: 0;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.price__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 0;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.price__section input[name="pincode"] {
+  width: 65px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #f5f5f5;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.price__section > p {
+  margin: 0 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.price__section input[name="price"] {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.price__section input[name="price"]:focus {
+  outline: none;
+  border-color: #7BC142;
+  box-shadow: 0 0 0 2px rgba(123, 193, 66, 0.2);
+}
+
+.action__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.agree input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.0);
+}
+
+.agree p {
+  margin: 0;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.action__section button {
+  width: 100%;
+  padding: 10px 20px;
+  background: #7BC142;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action__section button:hover {
+  background: #6aa836;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 193, 66, 0.3);
+}
+
+/* Legacy styles - keeping for backward compatibility */
+.details__section > .details > .check__all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 20px;
+}
+.details__section > .details > .check__all > p {
+  margin-left: 7px;
+  color: #444444;
+}
+.details__section > .details > .price__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0;
+  width: 100%;
+}
+.details__section > .details > .price__section > h1 {
+  font-size: 1.1rem;
+  color: #56b124;
+}
+.details__section > .details > .price__section > input {
+  border: 1px solid #000;
+  outline: none !important;
+  padding: 7px 10px;
+  font-size: 1rem;
+  border-radius: 50px;
+  width: 100%;
+  margin-left: 15px;
+}
+.details__section > .details > .price__section > input::placeholder {
+  font-size: 0.9rem;
+  color: #555555;
+}
+.details__section > .details > .price__section > p {
+  font-weight: bold;
+  color: #555555;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+.details__section > .details > .price__section > span {
+  margin-left: 8px;
+  font-size: 0.95rem;
+  color: #999999;
+  font-weight: bold;
+}
+.action__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 25px;
+}
+.action__section > .agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action__section > .agree > input {
+  margin-right: 7px;
+}
+.action__section > .agree > p {
+  color: #555555;
+  font-weight: bold;
+  text-align: left;
+}
+.action__section > button {
+  padding: 10px 30px;
+  outline: none !important;
+  border: none !important;
+  background-color: #56b124;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 50px;
+}
+.action__section > button:hover {
+  background-color: #05242a;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .details__section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .details__section > .img {
+    margin-bottom: 20px;
+  }
+  .details__section > .details {
+    width: 100%;
+    margin-left: 0;
+  }
+  .action__section {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .action__section > button {
+    margin-top: 20px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .dealer__price__item__card {
+    width: 60%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .dealer__price__item__card {
+    width: 90%;
+    padding: 30px 20px;
+    margin: 10px 0;
+  }
+  .details__section > .img {
+    width: 130px;
+    height: 130px;
+  }
+  .action__section {
+    align-items: flex-start;
+  }
+  .action__section > .agree {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .dealer__price__item__card {
+    width: 95%;
+  }
+}

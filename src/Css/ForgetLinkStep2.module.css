@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.forget__steptwo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.forget__steptwo img {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+/* div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 500px;
+        text-align: center;
+        padding: 40px;
+        box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+      } */
+.forget__steptwo h1 {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+  color: #555555;
+}
+
+.forget__steptwo a {
+  padding: 13px 50px;
+  background-color: #56b124;
+  border-radius: 50px;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: 0.3s;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.forget__steptwo a:hover {
+  background-color: #05242a;
+  border: 3px solid #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .forget__steptwo img {
+    width: 140px;
+  }
+
+  .forget__steptwo div {
+    width: 300px;
+    padding: 40px 20px;
+  }
+
+  .forget__steptwo h1 {
+    font-size: 1.5rem;
+  }
+}

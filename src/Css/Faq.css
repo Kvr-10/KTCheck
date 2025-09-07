@@ -1,0 +1,23 @@
+/* faq section */
+.faq__section {
+  width: 80%;
+  margin: 50px auto 100px;
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  /* faq section */
+  .faq__section {
+    width: 90%;
+    margin: 50px auto 70px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* faq section */
+  .faq__section {
+    width: 95%;
+    margin: 30px auto 50px;
+  }
+}

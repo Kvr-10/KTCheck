@@ -1,0 +1,67 @@
+.dealer__home__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 28%;
+  margin: 20px;
+  max-width: 400px;
+}
+.dealer__home__card > h1 {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #777777;
+}
+.dealer__home__card > p {
+  color: #56b124;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .dealer__home__card {
+    width: 40%;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .dealer__home__card {
+    width: 55%;
+    margin: 20px 0;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .dealer__home__card {
+    width: 85%;
+    margin: 15px 0;
+  }
+  .dealer__home__card > h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .dealer__home__card {
+    width: 90%;
+  }
+}
+
+/* Clickable card styles */
+.dealer__home__card.clickable {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.dealer__home__card.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: -5px 8px 30px rgba(0, 123, 255, 0.3);
+  border: 2px solid #007bff;
+}

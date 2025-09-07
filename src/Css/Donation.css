@@ -1,0 +1,426 @@
+.donationMainConatiner {
+  width: 100%;
+  background: #f4f4f4;
+  padding-bottom: 10px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+  .firstHeadingOfDonation {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+  }
+  .donationBackgoundImage {
+    margin: auto;
+    border-radius: 20px;
+    width: 80%;
+    height: 188px;
+    mix-blend-mode: luminosity;
+    object-fit: cover;
+  }
+  .headingDonation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    color: white;
+    height: 188px;
+  }
+  .headingDonation > div:first-child {
+    background: #e17f0b;
+    border-radius: 50%;
+    width: 78px;
+    height: 78px;
+  }
+  .supportFuture {
+    margin-left: -39px;
+  }
+  .supportFuture > p {
+    margin-top: 0px;
+  }
+  .donation {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .donation > div:first-child {
+    display: flex;
+    width: 55%;
+    min-width: 300px;
+  }
+  
+  .donation > div:first-child > form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .donation>div:first-child>form>label{
+      color: #000000;
+      text-align: left;
+      font-family: "SegoeUi-Semibold", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      /* position: relative; */
+      width: 100%;
+      height: 37px;
+      margin-top: 10px;
+  }
+  .donation>div:first-child>form>input{
+      background: #d9d9d9;
+      border-radius: 50px;
+      padding: 22px 20px;
+      border: none;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+  }
+  
+  .donation>div:first-child>form>input:focus{
+      box-shadow: 0 0 5px rgba(225, 127, 11, 0.5);
+  }
+  .donationImage {
+    width: 35%;
+    margin: auto;
+  }
+  .donationCircularImage{
+    width: 100%;
+  }
+  .donationCircularImage > img {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .rectangle-270 {
+    background: #002a28;
+    border-radius: 191px 191px 7px 7px;
+    min-height: 550px;
+    width: 100%;
+    margin-top: -200px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    z-index:0
+  }
+  
+  .rectangle-270 > p {
+    width: 80%;
+    margin: auto;
+    /* margin-top: 10px; */
+    display: flex;
+    bottom:7px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    line-height: 174.52%;
+    font-weight: 500;
+    position: absolute;
+    z-index: 2;
+  }
+  .payment{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  .payment>div{
+      width: 60px;
+      /* height: 60px; */
+      display: flex;
+      justify-content:space-between;
+      flex-direction: column;
+      align-items: center;
+      /* border: 1px solid black; */
+  }
+  .payment>div>img{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+  }
+  .payment>div>p{
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    /* position: relative; */
+    width: 91px;
+    height: 13px;
+  }
+  
+  .secure > p{
+    margin: 0px;
+    color: #807c7c;
+    text-align: left;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 90px;
+    height: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* media Query */
+  
+  @media (max-width:1400px) {
+    .donation {
+      width: 85%;
+    }
+  }
+  
+  @media (max-width:1220px) {
+    .donationImage{
+      width: 45%;
+    }
+    .donation {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width:1024px) {
+    .donation>div:first-child>form>label{
+      font-size: 20px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 20px 18px;
+    }
+    .rectangle-270 > p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width:960px) {
+    .donation>div:first-child>form>label{
+      font-size: 18px;
+      height: 30px;
+    }
+    .donation>div:first-child>form>input{
+      padding:18px 18px;
+    }
+    .rectangle-270 > p {
+      bottom:7px;
+      font-size: 17px;
+    }
+    .supportFuture > h1 {
+      font-size: 28px;
+    }
+  }
+  @media (max-width:768px) {
+    .donationBackgoundImage{
+      height: 164px;
+    }
+    .headingDonation{
+      height: 152px;
+    }
+   .donation{
+    width: 95%;
+    margin-top: 10px;
+    }
+    .donation > div:first-child {
+      width: 60%;
+    }
+    .donationImage {
+      width: 40%;
+    }
+    .payment > div > p{
+      font-size: 12px;
+      width: 70px;
+    }
+    .payment>div{
+      width: 45px;
+    }
+    .rectangle-270>p{
+      font-size: 16px;
+      width: 85%;
+    }
+    .donation>div:first-child>form>label{
+      font-size: 16px;
+      margin-top: 8px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 16px 16px;
+    }
+  }
+  
+  @media (max-width:600px) {
+    .supportFuture>h1{
+      font-size: 24px;
+    }
+    .supportFuture>p{
+      font-size: 14px;
+    }
+    .headingDonation {
+      height: 119px;
+    }
+    .headingDonation > div:first-child{
+      width: 60px;
+      height: 60px;
+    }
+    .donationBackgoundImage {
+      width: 100%;
+      border-radius: 0px;
+      height: 132px;
+    }
+    .donation{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+    .donation > div:first-child{
+      width: 90%;
+      margin: auto;
+    }
+    .donation > div:first-child > form{
+      width: 100%;
+    }
+    .donation>div:first-child>form>label{
+      font-size: 18px;
+      margin-top: 12px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 18px 16px;
+      margin-bottom: 5px;
+    }
+    .payment{
+      margin-top: 10px;
+    }
+    .donationImage{
+      background: #002a28;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px 10px 10px 10px;
+    }
+    .donationCircularImage{
+      width: 35%;
+    }
+    .donationCircularImage>img{
+      width: 100%;
+    }
+    .rectangle-270{
+      border-radius: 0px;
+      margin-top: 0px;
+      border-radius: 10px 10px 10px 10px;
+      min-height: min-content;
+      position: unset;
+    }
+    .rectangle-270 > p{
+      width: 90%;
+      position: unset;
+      margin: 0px;
+      padding: 12px 0px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width:480px) {
+    .supportFuture{
+      width: 90%;
+      margin: auto;
+    }
+    .supportFuture>h1{
+      margin: 0px;
+      font-size: 20px;
+    }
+    .supportFuture>p{
+      margin: 0px;
+      font-size: 12px;
+    }
+    .headingDonation > div:first-child{
+      width: 0px;
+      height: 0px;
+    }
+    .donation{
+      width: 95%;
+    }
+    .donation>div:first-child>form>label{
+      font-size: 16px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 15px 14px;
+    }
+    .payment > div > p{
+      font-size: 10px;
+      width: 60px;
+    }
+    .payment>div{
+      width: 40px;
+    }
+    .rectangle-270 > p{
+      font-size: 14px;
+      padding: 10px 0px;
+    }
+    .donationCircularImage{
+      width: 40%;
+    }
+  }
+
+  @media (max-width:360px) {
+    .supportFuture>h1{
+      font-size: 18px;
+    }
+    .supportFuture>p{
+      font-size: 11px;
+    }
+    .donation>div:first-child>form>label{
+      font-size: 14px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 12px 12px;
+    }
+    .payment > div > p{
+      font-size: 9px;
+      width: 50px;
+    }
+    .payment>div{
+      width: 35px;
+    }
+    .rectangle-270 > p{
+      font-size: 13px;
+    }
+    .payment{
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width:280px) {
+    .supportFuture>h1{
+      font-size: 16px;
+    }
+    .supportFuture>p{
+      font-size: 10px;
+    }
+    .donation>div:first-child>form>label{
+      font-size: 12px;
+    }
+    .donation>div:first-child>form>input{
+      padding: 10px 10px;
+    }
+    .payment > div > p{
+      font-size: 8px;
+      width: 45px;
+    }
+    .payment>div{
+      width: 30px;
+    }
+    .rectangle-270 > p{
+      font-size: 12px;
+    }
+    .donationCircularImage{
+      width: 45%;
+    }
+  } 

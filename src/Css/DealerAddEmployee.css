@@ -1,0 +1,145 @@
+.add__employee__form {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 70px 0 30px;
+    /* border: 2px solid red; */
+}
+
+
+.add__employee__form>.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid green; */
+}
+
+.add__employee__form>.input>div {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 30px;
+    /* border: 2px solid yellow; */
+}
+
+.add__employee__form>.input>div>label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.add__employee__form>.input>div>input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #666666;
+    outline: none !important;
+    border-radius: 50px;
+    /* width: 350px; */
+    margin-bottom: 20px;
+    font-size: 1rem;
+    /* border: 2px solid brown; */
+}
+
+.add__employee__btn {
+    padding: 12px 50px;
+    font-size: 1.2rem;
+    background-color: #56b124;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none !important;
+    outline: none !important;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.add__employee__files>div>label {
+    background-color: #56b124;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+}
+
+
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+
+    /* dealer document upload */
+    .add__employee__files>div {
+        width: 27%;
+        margin: 20px 10px;
+        max-width: none;
+    }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+
+    /* dealer document upload */
+    .add__employee__files>div {
+        width: 35%;
+        margin: 20px 10px;
+    }
+
+    .add__employee__form>.input {
+        width: 100%;
+    }
+
+    .add__employee__form>.input>div {
+        width: 50%;
+    }
+
+    .add__employee__form>.input>div>label {
+        font-size: 0.9rem;
+    }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+
+    /* dealer document upload */
+    .add__employee__files>div {
+        width: 70%;
+    }
+
+    .add__employee__form>.input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid green; */
+    }
+
+    .add__employee__form>.input>div {
+        width: 70%;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+    .add__employee__form>.input>div>label {
+        font-size: 1rem;
+        /* color: red; */
+        width: 50vw;
+        text-align: center;
+        /* border: 2px solid red; */
+
+    }
+    
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+
+    /* dealer document upload */
+    .add__employee__files>div {
+        width: 80%;
+    }
+}

@@ -1,0 +1,842 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+/* Banner Popup Styles */
+.banner__popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.banner__popup {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease-out;
+}
+
+.banner__popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.banner__popup__close:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.banner__popup__content {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #05242a;
+}
+
+.banner__popup__content.has-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.banner__popup__overlay__content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 40px;
+  color: #fff;
+  text-align: center;
+}
+
+.banner__popup__title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.banner__popup__desc {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.banner__popup__button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #56b124;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(86, 177, 36, 0.3);
+}
+
+.banner__popup__button:hover {
+  background: #3f8f1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(86, 177, 36, 0.4);
+}
+
+.banner__popup__indicators {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background: #fff;
+  gap: 8px;
+}
+
+.banner__popup__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.banner__popup__indicator.active {
+  background: #56b124;
+  transform: scale(1.2);
+}
+
+.banner__popup__indicator:hover {
+  background: #999;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles for popup */
+@media only screen and (max-width: 768px) {
+  .banner__popup {
+    width: 95%;
+    max-height: 70vh;
+  }
+  
+  .banner__popup__content {
+    height: 300px;
+  }
+  
+  .banner__popup__overlay__content {
+    margin: 0 20px;
+  }
+  
+  .banner__popup__title {
+    font-size: 1.8rem;
+  }
+  
+  .banner__popup__desc {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner__popup {
+    width: 98%;
+    max-height: 60vh;
+  }
+  
+  .banner__popup__content {
+    height: 250px;
+  }
+  
+  .banner__popup__title {
+    font-size: 1.5rem;
+  }
+  
+  .banner__popup__desc {
+    display: none;
+  }
+  
+  .banner__popup__close {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
+
+/* top banner */
+.about__top__banner {
+  background-image: url(../Image/banner1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  padding: 30px 70px;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+  text-align: justify;
+}
+.about__top__banner > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* new banner slideshow styles - DEPRECATED - Now using popup instead */
+/*
+.about__banner {
+  margin-top: 3px;
+  width: 100%;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+.about__banner .splide__slide {
+  height: 320px;
+}
+.banner-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #05242a;
+}
+.banner-slide.has-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.banner-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 30px;
+  color: #fff;
+  text-align: left;
+}
+.banner-title {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+.banner-desc {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 18px;
+  max-width: 800px;
+}
+.banner-button {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #56b124;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.banner-button:hover {
+  background: #3f8f1a;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__banner { height: 350px; }
+  .about__banner .splide__slide { height: 350px; }
+  .banner-title { font-size: 2rem; }
+  .banner-desc { font-size: 1rem; }
+}
+
+@media only screen and (max-width: 480px) {
+  .about__banner { height: 350px; }
+  .about__banner .splide__slide { height: 350px; }
+  .banner-overlay { text-align: center; }
+  .banner-title { font-size: 1.6rem; }
+  .banner-desc { display: none; }
+}
+*/
+.about__top__banner > p {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 0 auto 10px;
+}
+
+/* goal section */
+.goal__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 70px;
+}
+.goal__section > .goal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.goal__section > .goal > h1,
+.goal__section > .goal > p {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+.goal__section > .goal > h1 {
+  background-image: url(../Image/short__banner1.svg);
+  width: 30%;
+  font-size: 2.5rem;
+}
+.goal__section > .goal > p {
+  background-image: url(../Image/short__banner2.svg);
+  width: 70%;
+  font-size: 1.6rem;
+  padding: 50px;
+}
+
+/* certificate section */
+.certificate__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+  width: 100%;
+}
+.certificate__section > h1 {
+  color: #595959;
+  font-size: 3rem;
+}
+.certificate__section > .certificate {
+  width: 100%;
+}
+
+/* work section */
+.work__section {
+  background-image: url(../Image/banner6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 50px;
+}
+.work__section > h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+.work__section > .work {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* voting section */
+.voting__section {
+  display: flex;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.voting__section > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #595959;
+  margin-bottom: 50px;
+}
+.voting {
+  background: linear-gradient(rgba(17, 55, 70, 0.8), rgba(17, 55, 70, 8)),
+    url(../Image/banner7.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.voting > h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 80px;
+}
+.vote__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.vote__section > h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 1.7;
+}
+.vote__section > h1 > span {
+  color: #56b124;
+}
+.vote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.vote > button {
+  width: 250px;
+  height: 250px;
+  background-color: #56b124;
+  border-radius: 100%;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+  border: 3px solid #fff;
+  text-decoration: none;
+}
+
+.vote > p {
+  font-size: 2rem;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* join team section */
+.join__team__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+.join__team__section > .left__side,
+.join__team__section > .right__side {
+  width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+.join__team__section > .left__side {
+  background-image: url("../Image/short__banner3.svg");
+}
+.join__team__section > .left__side > h1 {
+  font-size: 3rem;
+}
+.join__team__section > .right__side {
+  background-image: url("../Image/short__banner4.svg");
+}
+.join__team__section > .right__side > h1 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  width: 90%;
+}
+.join__team__section > .right__side > .join__team__button {
+  padding: 13px 50px;
+  background-color: #56b124;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: 0.3s;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.join__team__section > .right__side > .join__team__button:hover {
+  background-color: #05242a;
+  border: 3px solid #fff;
+}
+
+/* team member section */
+.team__member__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 70px 0 80px;
+}
+.team__member__section > h1 {
+  font-size: 2.5rem;
+  color: #595959;
+  text-align: center;
+}
+.about__carousel__section {
+  width: 100%;
+}
+.team__member {
+  width: 28%;
+  margin: auto;
+  max-width: 380px;
+}
+.member {
+  width: 100%;
+}
+.member > img {
+  width: 100%;
+  height: 400px;
+}
+.member > div {
+  background: linear-gradient(#78d347, #1c4b03);
+  text-align: center;
+  color: #fff;
+  margin-top: 5px;
+  padding: 15px;
+}
+.member > div > h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.member > div > p {
+  font-size: 1.1rem;
+  font-family: "Noto Serif", serif;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  /* top banner */
+  .about__top__banner {
+    height: 600px;
+  }
+
+  /* certificate section */
+  .certificate__section {
+    margin-top: 50px;
+  }
+
+  /* voting section */
+  .vote__section {
+    justify-content: space-between;
+  }
+
+  /* join team section */
+  .join__team__section > .right__side > h1 {
+    width: 100%;
+  }
+
+  /* team member section */
+  .team__member {
+    width: 32%;
+  }
+  .member > img {
+    height: 350px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  /* top banner */
+  .about__top__banner {
+    clip-path: none;
+  }
+  .about__top__banner > h1 {
+    font-size: 2.5rem;
+  }
+  .about__top__banner > p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  /* goal section */
+  .goal__section > .goal > h1 {
+    background-image: url(../Image/short__banner1.svg);
+    width: 30%;
+    font-size: 2.1rem;
+  }
+  .goal__section > .goal > p {
+    background-image: url(../Image/short__banner2.svg);
+    width: 70%;
+    font-size: 1.4rem;
+    padding: 30px;
+  }
+
+  /* certificate section */
+  .certificate__section {
+    margin-top: 30px;
+  }
+  .certificate__section > h1 {
+    font-size: 2.5rem;
+  }
+
+  /* work section */
+  .work__section {
+    padding: 50px 40px;
+    background-image: none;
+    background-color: #eeeeee;
+  }
+  .work__section > h1 {
+    font-size: 2.5rem;
+    color: #595959;
+    margin-bottom: 30px;
+  }
+
+  /* voting section */
+  .voting__section {
+    margin-top: 60px;
+  }
+  .voting {
+    padding: 70px 40px;
+    background-image: none;
+    background-color: #05242a;
+  }
+  .vote > button {
+    width: 200px;
+    height: 200px;
+    font-size: 1.3rem;
+  }
+
+  /* join team section */
+  .join__team__section > .left__side > h1 {
+    font-size: 2.5rem;
+  }
+  .join__team__section > .right__side > h1 {
+    font-weight: normal;
+  }
+
+  /* team member section */
+  .team__member {
+    width: 43%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* top banner */
+  .about__top__banner {
+    padding: 20px 15px;
+    height: 650px;
+    text-align: center;
+  }
+  .about__top__banner > h1 {
+    font-size: 2.2rem;
+  }
+  .about__top__banner > p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 100%;
+  }
+
+  /* goal section */
+  .goal__section {
+    margin-top: 30px;
+  }
+  .goal__section > .goal > h1,
+  .goal__section > .goal > p {
+    width: 100%;
+  }
+  .goal__section > .goal > h1 {
+    background-image: none;
+    background-color: #05242a;
+    height: auto;
+    font-size: 1.8rem;
+    padding: 20px;
+    order: 1;
+  }
+  .goal__section > .goal > p {
+    height: auto;
+    padding: 25px;
+    order: 2;
+  }
+
+  /* certificate section */
+  .certificate__section {
+    margin-top: 30px;
+  }
+  .certificate__section > h1 {
+    font-size: 2rem;
+  }
+
+  /* work section */
+  .work__section {
+    padding: 40px 10px;
+  }
+  .work__section > h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  /* voting section */
+  .voting {
+    padding: 40px 20px;
+  }
+  .voting__section > h1 {
+    font-size: 2rem;
+  }
+  .voting > h1 {
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+  }
+  .vote__section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .vote__section > h1 {
+    margin: 30px 0;
+    font-size: 2rem;
+    order: 1;
+  }
+  .vote {
+    order: 2;
+    margin: 30px 0;
+  }
+  .vote > p {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    font-weight: normal;
+  }
+
+  /* join team section */
+  .join__team__section {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .join__team__section > .left__side,
+  .join__team__section > .right__side {
+    width: 100%;
+  }
+  .join__team__section > .left__side {
+    height: auto;
+    padding: 30px;
+  }
+  .join__team__section > .left__side > h1 {
+    font-size: 2rem;
+  }
+  .join__team__section > .right__side {
+    height: auto;
+    padding: 40px;
+  }
+  .join__team__section > .right__side > h1 {
+    margin-bottom: 30px;
+  }
+
+  /* team member section */
+  .team__member__section {
+    margin: 50px 0;
+  }
+  .team__member__section > h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .team__member {
+    width: 70%;
+  }
+  .member > img {
+    height: 300px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* top banner */
+  .about__top__banner {
+    padding: 20px 10px;
+    height: 700px;
+  }
+
+  /* certificate section */
+  .certificate__section {
+    margin-top: 25px;
+  }
+  .certificate__section > h1 {
+    font-size: 1.8rem;
+  }
+
+  /* voting section */
+  .voting__section {
+    margin-top: 40px;
+  }
+  .voting {
+    padding: 30px 10px;
+    background-image: none;
+    background-color: #05242a;
+  }
+  .voting__section > h1 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .vote__section > h1 {
+    margin: 25px 0;
+  }
+
+  /* join team section */
+  .join__team__section {
+    margin-top: 50px;
+  }
+
+  /* team member section */
+  .team__member__section > h1 {
+    font-size: 1.8rem;
+  }
+  .team__member {
+    width: 75%;
+  }
+  .member > img {
+    height: 280px;
+  }
+}

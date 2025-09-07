@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+/* sell item section */
+.sell__item__section > .no__service {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 10px 0 70px;
+}
+
+/* sell item header */
+.sell__item__header {
+  padding: 50px 50px 40px;
+}
+.sell__item__header > h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: "Noto Serif", serif;
+}
+.sell__item__area {
+  text-align: center;
+  margin-top: 30px;
+}
+.sell__item__area > p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.sell__item__area > p > span {
+  font-weight: normal;
+  color: #555555;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px; /*20px*/
+  color: #56b124;
+}
+.filter > Button {
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0;
+}
+.filter > Button .MuiSvgIcon-root {
+  margin-left: 10px;
+  color: #56b124;
+}
+
+/* sell item */
+.sell__item,
+.dealer__contact__section {
+  width: 100%;
+  display: flex;
+  align-items: stretch; /* Changed from center to stretch for equal height */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.dealer__contact__section {
+  max-width: 1500px;
+  margin: 0 auto 80px;
+  align-items: flex-start; /* Align items to start for consistent top alignment */
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  /* sell item */
+  .sell__item,
+  .dealer__contact__section {
+    justify-content: space-around;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* sell item section */
+  .sell__item__section > .no__service {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  /* sell item header */
+  .sell__item__header {
+    padding: 30px;
+  }
+  .sell__item__header > h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .sell__item__area {
+    text-align: left;
+  }
+  .sell__item__header > p {
+    margin-top: 30px;
+    justify-content: flex-start;
+  }
+  .filter {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  /* sell item */
+  .sell__item,
+  .dealer__contact__section {
+    margin-bottom: 70px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* sell item section */
+  .sell__item__section > .no__service {
+    margin-left: 20px;
+  }
+
+  /* sell item header */
+  .sell__item__header {
+    padding: 30px 20px 30px;
+  }
+}

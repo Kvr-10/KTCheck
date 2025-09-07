@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+.user__dealer__pickup__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  border: 3px solid #56b124;
+  border-radius: 10px;
+  width: 30%;
+  height: 250px;
+  margin: 20px;
+}
+.user__dealer__pickup__card > .left__side {
+  width: 65px;
+  height: 70px;
+}
+.user__dealer__pickup__card > .left__side > img {
+  width: 100%;
+}
+.user__dealer__pickup__card > .right__side {
+  text-align: left;
+  width: 70%;
+}
+.user__dealer__pickup__card > .right__side > p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.user__dealer__pickup__card > .right__side > p > span {
+  font-family: "Noto Serif", serif;
+  color: #888888;
+  font-size: 1rem;
+}
+.user__dealer__pickup__card > .right__side > p:last-child > span {
+  color: #56b124;
+}
+
+.pickup__btns {
+  display: flex;
+}
+.pickup__btns >button {
+  padding: 10px 19px;
+  background-color: #56b124;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  border: 2px solid white;
+  transition: 0.3s;
+  text-decoration: none;
+  margin: 2px 7px;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .user__dealer__pickup__card {
+    width: 45%;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .user__dealer__pickup__card {
+    width: 65%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__dealer__pickup__card {
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .user__dealer__pickup__card > .left__side {
+    width: 80px;
+    height: 80px;
+  }
+  .user__dealer__pickup__card > .right__side {
+    width: 100%;
+    margin-top: 30px;
+  }
+}

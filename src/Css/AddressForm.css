@@ -1,0 +1,267 @@
+/* Address Form Modal Styles */
+.address__modal__overlay {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Ensure SweetAlert appears above modal */
+.swal-container-high-z {
+  z-index: 10000 !important;
+}
+
+.swal2-container {
+  z-index: 10000 !important;
+}
+
+.address__modal__content {
+  position: relative;
+  background-color: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  outline: none;
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 380px;
+  max-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #f0f0f0;
+}
+
+.address__modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.address__modal__close:hover {
+  color: #56b124;
+}
+
+.address__form__title {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.address__form__input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  outline: none !important;
+  border: 2px solid #e1e5e9;
+  margin: 4px 0;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.address__form__row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.address__form__input--half {
+  width: 100%;
+  margin: 0;
+}
+
+.address__form__input:focus {
+  border-color: #56b124;
+  background-color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(86, 177, 36, 0.15);
+}
+
+.address__form__input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 400;
+}
+
+.address__form__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 10px;
+  width: 100%;
+}
+
+.address__form__button {
+  padding: 10px 20px;
+  background-color: #56b124;
+  color: #fff;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 7px;
+  margin: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex: 1;
+  min-height: 38px;
+}
+
+.address__form__button:hover {
+  background-color: #4a9b1f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(86, 177, 36, 0.3);
+}
+
+.address__form__button--cancel {
+  background-color: #6c757d;
+}
+
+.address__form__button--cancel:hover {
+  background-color: #5a6268;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+/* Responsive Design */
+
+/* 1024px - Large Tablet */
+@media only screen and (max-width: 1024px) {
+  .address__modal__content {
+    max-width: 420px;
+    padding: 22px 25px;
+  }
+
+  .address__form__title {
+    font-size: 1.4rem;
+  }
+
+  .address__form__input {
+    padding: 11px 15px;
+  }
+}
+
+/* 768px - Tablet Portrait */
+@media only screen and (max-width: 768px) {
+  .address__modal__overlay {
+    padding: 15px;
+  }
+
+  .address__modal__content {
+    max-width: 380px;
+    padding: 20px 22px;
+  }
+
+  .address__form__title {
+    font-size: 1.3rem;
+  }
+
+  .address__form__input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .address__form__buttons {
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .address__form__button {
+    padding: 10px 16px;
+    font-size: 14px;
+    min-height: 38px;
+  }
+}
+
+/* 480px - Mobile Landscape */
+@media only screen and (max-width: 480px) {
+  .address__modal__overlay {
+    padding: 10px;
+  }
+
+  .address__modal__content {
+    max-width: 100%;
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+
+  .address__form__title {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .address__form__row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .address__form__input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 3px 0;
+    font-size: 14px;
+    border-radius: 7px;
+  }
+
+  .address__form__buttons {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .address__form__button {
+    width: 100%;
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 7px;
+    min-height: 38px;
+  }
+}
+
+/* 360px - Mobile Portrait */
+@media only screen and (max-width: 360px) {
+  .address__modal__content {
+    padding: 14px 10px;
+    border-radius: 8px;
+  }
+
+  .address__form__title {
+    font-size: 1rem;
+  }
+
+  .address__form__input {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .address__form__button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}

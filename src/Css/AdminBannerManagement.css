@@ -1,0 +1,29 @@
+/* Desktop: horizontal gap between buttons */
+.admin-banner-btns {
+  display: flex;
+  gap: 16px;
+}
+/* Responsive styles for Admin Banner Management buttons */
+@media (max-width: 600px) {
+  .admin-banner-btns {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+  .admin-banner-btns button {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 12px 0 !important;
+    font-size: 15px !important;
+  }
+  .admin-banner-btns button:first-child {
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .admin-banner-btns button {
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+  }
+}

@@ -1,0 +1,80 @@
+.user__dealer__profile__edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user__dealer__profile__edit > .change__pic__label {
+  font-size: 1.5rem;
+  padding: 13px 30px;
+  margin: 2px;
+  border-radius: 50px;
+  background-color: #56b124;
+  color: white;
+  font-weight: 100;
+}
+.user__dealer__profile__edit > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+}
+.user__dealer__profile__edit > form > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+.user__dealer__profile__edit > form > label {
+  background-color: #e5e5e5;
+  cursor: pointer;
+  padding: 12px 30px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+}
+.user__dealer__profile__edit > form > input {
+  padding: 13px 20px;
+  font-size: 1.1rem;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  outline: none !important;
+  margin: 10px 0;
+  width: 100%;
+}
+.user__dealer__profile__edit > form > input::placeholder {
+  font-size: 1rem;
+}
+.user__dealer__profile__edit > form > button {
+  border: none !important;
+  outline: none !important;
+  padding: 13px 60px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #56b124;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+.user__dealer__profile__edit > form > button:hover {
+  background-color: #05242a;
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__dealer__profile__edit > form {
+    width: 350px;
+  }
+  .user__dealer__profile__edit > form > img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .user__dealer__profile__edit > form {
+    width: 330px;
+  }
+}

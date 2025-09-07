@@ -1,0 +1,108 @@
+.user__dealer__qr__section {
+  width: 100vw;
+  /* max-width: 350px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.user__dealer__qr {
+  /* padding: 40px 30px; */
+  /* padding: 2rem ; */
+  width: 20%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 4px solid #56b124;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+}
+
+.user__dealer__qr>img {
+  width: 170px;
+  height: 170px;
+  /* width: 50vw; */
+  /* height: 50vh; */
+}
+
+.user__dealer__qr>p {
+  font-weight: bold;
+  font-size: 1.3rem;
+  /* margin: 20px 0 30px; */
+  /* border: 2px solid red; */
+}
+
+.user__dealer__qr>h1 {
+  margin-top: 15px;
+  font-size: 2rem;
+}
+
+.user__dealer__qr>h1:last-child {
+  color: #999999;
+  font-size: 2rem;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .user__dealer__qr__section {
+    width: 65vw;
+  }
+  .user__dealer__qr {
+    /* width: 30vw; */
+    height: 65vh;
+    width: 90%;
+  }
+  .user__dealer__qr>p {
+    font-size: 2rem;
+  }
+  /* .user__dealer__qr>img {
+    width: 50%;
+    height: 40%;
+  } */
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .user__dealer__qr__section {
+    width: 50vw;
+  }
+
+  .user__dealer__qr {
+    /* width: 50vw; */
+    height: 65vh;
+    width: 90%;
+  }
+  .user__dealer__qr>p {
+    font-size: 1.1rem;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__dealer__qr__section {
+    width: 80%;
+  }
+
+  .user__dealer__qr {
+    width: 70vw;
+    height: 40vh;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .user__dealer__qr__section {
+    width: 95%;
+  }
+  .user__dealer__qr {
+    width: 90vw;
+    height: 65vh;
+  }
+  .user__dealer__qr>p {
+    font-size: 0.8rem;
+  }
+}

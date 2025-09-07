@@ -1,0 +1,206 @@
+.user__area__card {
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 10px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25%;
+    max-width: 350px;
+    min-height: 280px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+}
+
+.user__area__card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.user__area__card > p {
+    color: #56b124;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 8px 0;
+    line-height: 1.4;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.user__area__card > p > span {
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-left: 8px;
+    word-break: break-word;
+    flex: 1;
+    text-align: left;
+}
+
+.user__area__card > button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: #56b124;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.user__area__card > button:hover {
+    background-color: #05242a;
+}
+
+.address__card__buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.address__card__buttons button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-height: 38px;
+}
+
+.address__card__buttons button:first-child {
+    background-color: #56b124;
+    color: white;
+}
+
+.address__card__buttons button:first-child:hover {
+    background-color: #4a9b1f;
+    transform: translateY(-1px);
+}
+
+.address__card__buttons button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+.address__card__buttons button:last-child:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+  
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .user__area__card {
+    width: 28%;
+    max-width: none;
+    padding: 20px;
+  }
+
+  .user__area__card > p {
+    font-size: 0.95rem;
+  }
+
+  .user__area__card > p > span {
+    font-size: 0.9rem;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .user__area__card {
+    width: 40%;
+    padding: 18px;
+    min-height: 260px;
+  }
+
+  .user__area__card > p {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+
+  .user__area__card > p > span {
+    font-size: 0.85rem;
+  }
+
+  .address__card__buttons {
+    padding-top: 12px;
+  }
+
+  .address__card__buttons button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .user__area__card {
+    width: 75%;
+    padding: 16px;
+    margin: 15px 10px;
+    min-height: 240px;
+  }
+
+  .user__area__card > p {
+    font-size: 0.85rem;
+    margin: 5px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user__area__card > p > span {
+    font-size: 0.8rem;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+
+  .address__card__buttons {
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .address__card__buttons button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .user__area__card {
+    width: 85%;
+    padding: 14px;
+    margin: 12px 5px;
+    min-height: 220px;
+  }
+
+  .user__area__card > p {
+    font-size: 0.8rem;
+    margin: 4px 0;
+  }
+
+  .user__area__card > p > span {
+    font-size: 0.75rem;
+  }
+
+  .address__card__buttons button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}  

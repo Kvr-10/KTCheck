@@ -1,0 +1,65 @@
+.add__address__card {
+    padding: 2px 4px;
+    box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+    margin: 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    max-width: 300px;
+}
+
+.add__address__card:hover {
+    cursor: pointer;
+}
+
+.add__address__card > span {
+    content: "\002B";
+    font-size: 18rem;
+    color: #56b124;
+}
+.add__address__card > p {
+    font-size: 1.5rem;
+    color: #56b124;
+}
+
+.address_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+    .add__address__card {
+        width: 28%;
+        max-width: none;
+    }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+    .add__address__card {
+        width: 40%;
+    }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+    .add__address__card {
+        width: 75%;
+    }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+    .add__address__card {
+        width: 85%;
+    }
+}

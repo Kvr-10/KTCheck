@@ -1,0 +1,71 @@
+.dealer__area__card {
+  padding: 40px 30px;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+  margin: 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 25%;
+  max-width: 300px;
+}
+.dealer__area__card > h1 {
+  color: #555555;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.dealer__area__card > p {
+  color: #56b124;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 10px;
+}
+.dealer__area__card > p > span {
+  color: #777777;
+  font-size: 1.2rem;
+}
+.dealer__area__card > button {
+  margin-top: 30px;
+  padding: 10px 30px;
+  background-color: #56b124;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.dealer__area__card > button:hover {
+  background-color: #05242a;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .dealer__area__card {
+    width: 28%;
+    max-width: none;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .dealer__area__card {
+    width: 40%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .dealer__area__card {
+    width: 75%;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .dealer__area__card {
+    width: 85%;
+  }
+}

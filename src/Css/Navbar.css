@@ -1,0 +1,426 @@
+/* navbar */
+.navbar {
+  width: 100%;
+  margin: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent; /* Changed from #fff to transparent */
+  /* Remove or comment out the box-shadow if you don't want it on the transparent background */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+.navbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 10px 50px;
+  border-radius: 50px;
+  background-color: #05242a;
+  box-shadow: 0 4px 20px rgba(5, 36, 42, 0.3);
+}
+
+/* Adjust navbar when admin button is active */
+.navbar.admin-active > div {
+  max-width: 1600px;
+  padding: 10px 40px;
+}
+
+/* logo */
+.navbar > div > .logo {
+  width: 180px;
+  flex-shrink: 0;
+}
+.navbar > div > .logo > img {
+  width: 100%;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* navlist */
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navlist > li,
+.navlist > li > .signin {
+  list-style: none;
+  margin: 0 15px;
+}
+
+/* Reduce spacing when admin button is present */
+.navbar.admin-active .navlist > li,
+.navbar.admin-active .navlist > li > .signin {
+  margin: 0 12px;
+}
+.navlink {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px 0;
+  position: relative;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.navlink:hover {
+  color: #78d347;
+}
+.active__navlink {
+  padding: 30px;
+  background-image: url(../Image/button1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+}
+
+/* menu */
+.menu {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile menu backdrop overlay */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============================================= */
+/* RESPONSIVE DESIGN - MOBILE FIRST APPROACH */
+/* ============================================= */
+
+/* Large Desktop (1200px and up) */
+@media screen and (min-width: 1200px) {
+  .navbar > div {
+    padding: 12px 60px;
+    max-width: 1400px;
+  }
+  
+  .navbar.admin-active > div {
+    max-width: 1600px;
+    padding: 12px 50px;
+  }
+  
+  .navbar > div > .logo {
+    width: 200px;
+  }
+  
+  .navbar.admin-active > div > .logo {
+    width: 180px;
+  }
+  
+  .navlist > li {
+    margin: 0 20px;
+  }
+  
+  .navbar.admin-active .navlist > li {
+    margin: 0 15px;
+  }
+  
+  .navlink {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  .navbar > div {
+    padding: 12px 40px;
+    width: 96%;
+  }
+  
+  .navbar.admin-active > div {
+    padding: 12px 30px;
+    max-width: 1500px;
+  }
+  
+  .navbar > div > .logo {
+    width: 180px;
+  }
+  
+  .navbar.admin-active > div > .logo {
+    width: 160px;
+  }
+  
+  .navlist > li {
+    margin: 0 12px;
+  }
+  
+  .navbar.admin-active .navlist > li {
+    margin: 0 10px;
+  }
+  
+  .navlink {
+    font-size: 1rem;
+  }
+  
+  .navbar.admin-active .navlink {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet Landscape (768px to 991px) */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .navbar > div {
+    padding: 15px 25px;
+    border-radius: 25px;
+    width: 98%;
+  }
+  
+  .navbar.admin-active > div {
+    padding: 15px 20px;
+  }
+  
+  .navbar > div > .logo {
+    width: 160px;
+  }
+  
+  .navbar.admin-active > div > .logo {
+    width: 140px;
+  }
+  
+  .navlist > li {
+    margin: 0 10px;
+  }
+  
+  .navbar.admin-active .navlist > li {
+    margin: 0 8px;
+  }
+  
+  .navlink {
+    font-size: 0.95rem;
+  }
+  
+  .navbar.admin-active .navlink {
+    font-size: 0.9rem;
+  }
+  
+  .active__navlink {
+    padding: 20px 15px;
+    background-size: 80%;
+  }
+}
+
+/* Tablet Portrait and Mobile (767px and below) */
+@media screen and (max-width: 767px) {
+  .navbar {
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .navbar > div {
+    padding: 12px 20px;
+    border-radius: 0;
+    width: 100%;
+    background-color: #05242a;
+    position: relative;
+  }
+  
+  .navbar > div > .logo {
+    width: 140px;
+  }
+  
+  /* Hide desktop navigation */
+  .navlist {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 80px 0 20px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    overflow-y: auto;
+  }
+  
+  .navlist.navlist__active {
+    left: 0;
+  }
+  
+  .navlist > li {
+    margin: 0;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .navlist > li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  
+  .navlist > li > .navlink {
+    color: #05242a;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 20px;
+    display: block;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 2px solid transparent;
+  }
+  
+  .navlist > li > .navlink:hover {
+    background-color: #f8f9fa;
+    color: #05242a;
+    border-color: #e9ecef;
+  }
+  
+  .navlist > li > .active__navlink {
+    background-color: #05242a !important;
+    color: #ffffff !important;
+    background-image: none !important;
+    padding: 16px 20px !important;
+    border-color: #05242a !important;
+  }
+  
+  /* Show mobile menu button */
+  .menu {
+    display: block;
+    z-index: 1001;
+    font-size: 1.4rem;
+    padding: 8px;
+  }
+}
+
+/* Mobile Large (576px to 767px) */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .navbar > div {
+    padding: 14px 25px;
+  }
+  
+  .navbar > div > .logo {
+    width: 150px;
+  }
+  
+  .navlist {
+    width: 300px;
+    padding: 90px 0 20px 0;
+  }
+  
+  .navlist > li > .navlink {
+    font-size: 1.1rem;
+    padding: 18px 25px;
+  }
+  
+  .navlist > li > .active__navlink {
+    padding: 18px 25px !important;
+  }
+}
+
+/* Mobile Medium (480px to 575px) */
+@media screen and (max-width: 575px) and (min-width: 480px) {
+  .navbar > div {
+    padding: 12px 20px;
+  }
+  
+  .navbar > div > .logo {
+    width: 130px;
+  }
+  
+  .navlist {
+    width: 280px;
+  }
+  
+  .navlist > li > .navlink {
+    font-size: 1rem;
+    padding: 16px 20px;
+  }
+}
+
+/* Mobile Small (320px to 479px) */
+@media screen and (max-width: 479px) {
+  .navbar > div {
+    padding: 10px 15px;
+  }
+  
+  .navbar > div > .logo {
+    width: 120px;
+  }
+  
+  .navlist {
+    width: 260px;
+    padding: 70px 0 20px 0;
+  }
+  
+  .navlist > li > .navlink {
+    font-size: 0.95rem;
+    padding: 14px 18px;
+  }
+  
+  .navlist > li > .active__navlink {
+    padding: 14px 18px !important;
+  }
+  
+  .menu {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media screen and (max-width: 319px) {
+  .navbar > div {
+    padding: 8px 12px;
+  }
+  
+  .navbar > div > .logo {
+    width: 110px;
+  }
+  
+  .navlist {
+    width: 240px;
+    padding: 60px 0 20px 0;
+  }
+  
+  .navlist > li > .navlink {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+  
+  .navlist > li > .active__navlink {
+    padding: 12px 16px !important;
+  }
+  
+  .menu {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+}

@@ -1,0 +1,13 @@
+.pin__btns {
+    background-color: #56b124;
+    color: white;
+    width: 30%;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+.pin__btns:hover {
+    cursor: pointer;
+    background-color: #05242a;
+}

@@ -1,0 +1,341 @@
+.donationDone {
+  background-image: url(../Images/extra.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+  .secondWasteDonation {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .wastedonationImage {
+    width: 35%;
+  }
+  .wastedonationCircularImage {
+    width: 100%;
+  }
+  .wastedonationCircularImage > img {
+    width: 100%;
+  }
+  .rectangle-270-block2 {
+    background: #002a28;
+    border-radius: 191px 191px 7px 7px;
+    min-height: 550px;
+    width: 100%;
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+  }
+  .rectangle-270-block2 > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+  
+  }
+  .rectangle-270-block2 > div > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 174.52%;
+    font-weight: 500;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    color: #ffffff;
+    text-align: center;
+    font-family: "SegoeUi-Semibold", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .rectangle-270-block2 > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .kabadiDonation {
+    color: #f8f8f8;
+    text-align: center;
+    font-family: "SegoeUi-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 162.02%;
+    font-weight: 400;
+      margin-bottom: 0px;
+    width: 277px;
+    height: 34px;
+  }
+  .paraDonation {
+    color: #e17f0b;
+    text-align: center;
+    font-family: "SegoeUi-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 162.02%;
+    font-weight: 400;
+    text-decoration: underline;
+    width: 115px;
+    height: 18px;
+    margin-top: 0px;
+  }
+  .donationHeading {
+    width: 55%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .donationHeading > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "SegoeUi-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 142.02%;
+    font-weight: 700;
+    margin: 0px;
+  }
+  
+/* media query */
+
+@media (max-width:1400px) {
+  .secondWasteDonation {
+    width: 85%;
+  }
+}
+
+@media (max-width:1220px) {
+  .secondWasteDonation {
+    width: 90%;
+  }
+}
+
+@media (max-width:1024px) {
+  .donationHeading > p {
+    font-size: 35px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 28px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:960px) {
+  .donationHeading {
+    width: 50%;
+  }
+  .wastedonationImage{
+    width: 45%;
+  }
+  .donationHeading > p{
+    font-size: 30px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 26px;
+  }
+}
+
+@media (max-width:768px){
+  .secondWasteDonation{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+  }
+  .wastedonationImage{
+    background: #002a28;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    width: 100%;
+    padding: 15px 0px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .wastedonationCircularImage{
+    width: 35%;
+    z-index: 1;
+  }
+  .rectangle-270-block2{
+    border-radius: 0px;
+    min-height: unset;
+    margin-top: unset;
+  }
+  .rectangle-270-block2>div{
+    margin-top: 0px;
+    padding: 15px 0px;
+  }
+  .donationHeading{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .donationHeading>p{
+    color: grey;
+    text-align: center;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 24px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 16px;
+  }
+}
+  
+@media (max-width:600px) {
+  .secondWasteDonation{
+    width: 90%;
+  }
+  .donationHeading > p {
+    font-size: 22px;
+  }
+  .wastedonationImage{
+    margin-top: 10px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 22px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 15px;
+  }
+  .wastedonationCircularImage{
+    width: 40%;
+  }
+}
+
+@media (max-width:480px){
+  .donationHeading > p {
+    font-size: 18px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 20px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 14px;
+  }
+  .rectangle-270-block2>div>div{
+    margin-top: 10px;
+  }
+  .kabadiDonation {
+    font-size: 12px;
+    width: 200px;
+  }
+  .paraDonation {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:360px) {
+  .donationHeading > p {
+    font-size: 16px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 18px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 13px;
+  }
+  .wastedonationCircularImage{
+    width: 45%;
+  }
+  .kabadiDonation {
+    font-size: 11px;
+    width: 180px;
+  }
+  .paraDonation {
+    font-size: 11px;
+  }
+}
+
+@media (max-width:280px) {
+  .donationHeading > p {
+    font-size: 14px;
+  }
+  .rectangle-270-block2 > div > p:first-child {
+    font-size: 16px;
+  }
+  .rectangle-270-block2 > div > p {
+    font-size: 12px;
+  }
+  .wastedonationCircularImage{
+    width: 50%;
+  }
+  .kabadiDonation {
+    font-size: 10px;
+    width: 160px;
+  }
+  .paraDonation {
+    font-size: 10px;
+  }
+  .rectangle-270-block2>div>div>img {
+    width: 60px;
+    height: auto;
+  }
+}  
+  
+  
+  
+  /* .block2{
+  height: 600px;
+  position: unset;
+  }
+  .rectangle-270 > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    position: relative;
+  }
+  .rectangle-270>div>p:first-child{
+    color: #ffffff;
+    text-align: center;
+    font-family: "SegoeUi-Semibold", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .rectangle-270 > div > p {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    line-height: 174.52%;
+    font-weight: 500;
+  }
+  .rectangle-270 > div > div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .rectangle-270 > div > div > img {
+    width: 20%;
+  }
+  
+  
+  .secondDivDonation{
+      display: flex;
+      width: 80%;
+      margin: auto;
+      justify-content: space-between;
+  }
+  
+  .donationHeading{
+      width: 55%;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+  }
+   */
+  

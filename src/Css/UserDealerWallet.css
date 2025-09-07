@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+/* user dealer wallet section */
+.user__dealer__wallet {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  max-width: 1500px;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* user dealer wallet step */
+.user__dealer__wallet__step {
+  padding: 20px;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 450px;
+}
+.user__dealer__wallet__button {
+  padding: 13px 50px;
+  border: none !important;
+  outline: none !important;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  background-color: #56b124;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.user__dealer__wallet__button:hover {
+  background-color: #05242a;
+}
+
+/* user dealer wallet step 1*/
+.user__dealer__wallet__step1 {
+  padding-top: 0;
+}
+.user__dealer__wallet__step1 > .user__dealer__wallet__history__icon {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000;
+}
+.user__dealer__wallet__step1 > img {
+  width: 100px;
+  height: 100px;
+}
+.user__dealer__wallet__step1 > h1 {
+  margin: 50px;
+  font-family: "Noto Serif", serif;
+}
+
+/* user dealer wallet step 2 */
+.user__dealer__wallet__step2 > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.user__dealer__wallet__step2 > div > img {
+  width: 70px;
+  height: 70px;
+}
+.user__dealer__wallet__step2 > div > h1 {
+  margin: 30px;
+  font-family: "Noto Serif", serif;
+  font-size: 1.5rem;
+}
+.user__dealer__wallet__step2 > div > button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+}
+.user__dealer__wallet__step2 > div > button > img {
+  width: 100%;
+}
+.user__dealer__wallet__step2 > input {
+  padding: 13px;
+  font-size: 1.1rem;
+  border: 1px solid #aaaaaa;
+  outline: none !important;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.user__dealer__wallet__step2 > input::placeholder {
+  font-size: 1rem;
+}
+
+/* user dealer wallet step 3 */
+.user__dealer__wallet__step3 > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.user__dealer__wallet__step3 > div > img {
+  width: 70px;
+  height: 70px;
+}
+.user__dealer__wallet__step3 > div > h1 {
+  margin: 30px;
+  font-family: "Noto Serif", serif;
+  font-size: 1.5rem;
+}
+.user__dealer__wallet__step3 > h1 {
+  font-size: 1.7rem;
+  color: #56b124;
+  margin: 10px 0;
+}
+.user__dealer__wallet__step3 > p {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user__dealer__wallet__step3 > p > span {
+  color: #777777;
+  font-size: 1rem;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  /* user dealer wallet step */
+  .user__dealer__wallet__step {
+    width: 30%;
+    height: 420px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  /* user dealer wallet section */
+  .user__dealer__wallet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* user dealer wallet step */
+  .user__dealer__wallet__step {
+    width: 45%;
+    height: 450px;
+    margin-bottom: 30px;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* user dealer wallet step */
+  .user__dealer__wallet__step {
+    width: 80%;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* user dealer wallet step */
+  .user__dealer__wallet__step {
+    width: 90%;
+  }
+}

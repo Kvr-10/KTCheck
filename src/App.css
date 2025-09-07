@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import "./Css/responsive.css";
+@import "./Css/form-responsive.css";
+@import "./Css/card-responsive.css";
+
+@import "tailwindcss";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for rem calculations */
+}
+
+body {
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Ensure images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Improve button accessibility */
+button, .btn {
+  min-height: 22px; /* Minimum touch target size */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Focus styles for accessibility - less intrusive */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #56b124;
+  outline-offset: 2px;
+}
+
+/* Remove default focus outline for mouse/touch interactions */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Skip to main content for screen readers */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #56b124;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+.skip-to-main:focus {
+  top: 6px;
+}
+
+/* main section carousel */
+.main__section__carousel>h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #595959;
+  font-size: 2rem;
+}
+
+/* scrap section */
+.scrap__section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+
+/* scrap section card */
+.scrap__section__card {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  border: none !important;
+  outline: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.scrap__section__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.scrap__section__card>img {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  transition: 0.3s;
+  border: 1px solid #000;
+  box-shadow: 13px 13px 0 rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.scrap__section__card>p {
+  padding: 15px 30px;
+  font-size: 1.4rem;
+  color: #fff;
+  background-image: url(./Image/button1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 20px;
+  text-align: center;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* modal */
+.modal__overlay {
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal__close__icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.modal__close__icon:hover {
+  color: #56b124;
+}
+
+.modal__content {
+  position: relative;
+  background-color: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 20px;
+  outline: none;
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  border: 1px solid #f0f0f0;
+}
+
+.modal__content>h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.modal__content>p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  text-align: center;
+  color: #666;
+}
+
+.modal__content>input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  outline: none !important;
+  border: 2px solid #e1e5e9;
+  margin: 8px 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.modal__content>input:focus {
+  border-color: #56b124;
+  background-color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(86, 177, 36, 0.15);
+}
+
+.modal__content>input::placeholder {
+  font-size: 0.95rem;
+  color: #999;
+  font-weight: 400;
+}
+
+.modal__content>label {
+  background-color: #e5e5e5;
+  cursor: pointer;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+}
+
+.modal__content>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 15px;
+  width: 100%;
+}
+
+.modal__content>div>button {
+  padding: 14px 30px;
+  background-color: #56b124;
+  color: #fff;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  flex: 1;
+  min-height: 50px;
+}
+
+.modal__content>div>button:hover {
+  background-color: #4a9b1f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(86, 177, 36, 0.3);
+}
+
+.modal__content>div>button:first-child {
+  background-color: #6c757d;
+}
+
+.modal__content>div>button:first-child:hover {
+  background-color: #5a6268;
+}
+
+/* carousel section */
+.carousel__section {
+  margin: 20px 0 50px;
+}
+
+.main__carousel {
+  width: 60%;
+  margin: auto;
+  max-width: 800px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  padding-right: 12px !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel>img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.carousel>div {
+  background: linear-gradient(135deg, #78d347, #1c4b03);
+  height: 100%;
+  align-items: flex-start;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  /* border: 2px solid red; */
+  border-radius: 0 12px 12px 0; 
+}
+
+.carousel>div>h1 {
+  font-size: 1.25rem;
+  width: 95%;
+  font-weight: normal;
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  padding-right: 10px;
+  /* border: 2px solid yellow; */
+}
+
+.carousel>div>p {
+  color: black;
+  font-weight: bold;
+  margin-top: 1rem;
+  /* border: 2px solid blue; */
+}
+
+/* similar section */
+.similar__section {
+  margin: 70px auto 100px;
+  text-align: center;
+}
+
+.similar__section__heading {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+}
+
+.similar__section__headinng {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+/* sell faq top banner */
+.sell__faq__top__banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./Image/banner3.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25vh;
+}
+
+.sell__faq__top__banner>h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* 1024px - Tablet Landscape */
+@media only screen and (max-width: 1024px) {
+
+  /* scrap section */
+  .scrap__section {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 15px;
+    gap: 15px;
+  }
+
+  .scrap__section__card>p {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  /* modal */
+  .modal__content {
+    max-width: 450px;
+    padding: 25px;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .carousel {
+    height: 220px;
+  }
+
+  .carousel>div {
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  .carousel>div>h1 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* similar section */
+  .similar__section__heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner>h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* 768px - Tablet Portrait */
+@media only screen and (max-width: 768px) {
+
+  /* main section carousel */
+  .main__section__carousel {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+
+  .main__section__carousel>h1 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .scrap__section__card {
+    max-width: 320px;
+  }
+
+  .scrap__section__card>img {
+    height: 180px;
+  }
+
+  .scrap__section__card>p {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+
+  /* modal */
+  .modal__overlay {
+    padding: 15px;
+  }
+
+  .modal__content {
+    max-width: 500px;
+    padding: 30px 25px;
+  }
+
+  .modal__content>h1 {
+    font-size: 1.7rem;
+  }
+
+  .modal__content>input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 14px 18px;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 90%;
+  }
+
+  .carousel>div {
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+  }
+
+  .carousel>div>h1 {
+    font-size: 1rem;
+    line-height: 1.4;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* similar section */
+  .similar__section {
+    margin: 50px auto;
+    padding: 0 15px;
+  }
+
+  .similar__section__heading {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner {
+    height: 20vh;
+    min-height: 150px;
+  }
+
+  .sell__faq__top__banner>h1 {
+    font-size: 2.3rem;
+    padding: 0 20px;
+  }
+}
+
+/* 480px - Mobile Landscape */
+@media only screen and (max-width: 480px) {
+
+  /* main section carousel */
+  .main__section__carousel {
+    padding: 0 10px;
+  }
+
+  .main__section__carousel>h1 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+    gap: 15px;
+  }
+
+  .scrap__section__card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .scrap__section__card>img {
+    height: 200px;
+    max-width: 280px;
+  }
+
+  .scrap__section__card>p {
+    font-size: 1rem;
+    padding: 8px 15px;
+    margin-top: 15px;
+  }
+
+  /* modal */
+  .modal__overlay {
+    padding: 10px;
+  }
+
+  .modal__content {
+    max-width: 100%;
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+
+  .modal__content>h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .modal__content>input {
+    width: 100%;
+    padding: 16px 18px;
+    margin: 6px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .modal__content>div {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .modal__content>div>button {
+    width: 100%;
+    margin: 0;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  /* carousel section */
+  .main__carousel {
+    width: 95%;
+  }
+
+  .carousel {
+    height: auto;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .carousel>img {
+    border-radius: 50%;
+    margin: 20px 0;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .carousel>div {
+    padding: 20px;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .carousel>div>h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .carousel>div>p {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  /* similar section */
+  .similar__section {
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  .similar__section__heading {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner {
+    height: 18vh;
+    min-height: 120px;
+  }
+
+  .sell__faq__top__banner>h1 {
+    font-size: 1.8rem;
+    padding: 0 15px;
+    line-height: 1.2;
+  }
+}
+
+/* 360px - Mobile Portrait */
+@media only screen and (max-width: 360px) {
+
+  /* main section carousel */
+  .main__section__carousel>h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding: 0 5px;
+  }
+
+  /* scrap section */
+  .scrap__section {
+    padding: 15px 5px;
+    gap: 12px;
+  }
+
+  .scrap__section__card>img {
+    height: 180px;
+    max-width: 250px;
+  }
+
+  .scrap__section__card>p {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-top: 12px;
+  }
+
+  /* modal */
+  .modal__content {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .modal__content>h1 {
+    font-size: 1.3rem;
+  }
+
+  .modal__content>input {
+    padding: 14px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .modal__content>div>button {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  /* carousel section */
+  .carousel__section {
+    margin: 30px 0 50px;
+  }
+
+  .carousel {
+    margin: 0 5px;
+  }
+
+  .carousel>img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+  }
+
+  .carousel>div {
+    padding: 15px;
+  }
+
+  .carousel>div>h1 {
+    font-size: 0.9rem;
+  }
+
+  .carousel>div>p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* similar section */
+  .similar__section {
+    padding: 0 5px;
+    margin: 30px auto;
+  }
+
+  .similar__section__heading {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  /* sell faq top banner */
+  .sell__faq__top__banner {
+    height: 15vh;
+    min-height: 100px;
+  }
+
+  .sell__faq__top__banner>h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+    line-height: 1.1;
+  }
+}

@@ -1,0 +1,111 @@
+/* dealer document upload */
+.dealer__document__upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dealer__document__upload > .document__upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+  width: 100%;
+}
+.dealer__document__upload > .document__upload > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  width: 20%;
+  max-width: 280px;
+  margin: 20px 10px;
+  height: 320px;
+}
+.dealer__document__upload > .document__upload > div > img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.dealer__document__upload > .document__upload > div > p {
+  color: rgb(255, 89, 89);
+}
+.dealer__document__upload > .document__upload > div > label {
+  background-color: #e5e5e5;
+  cursor: pointer;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+}
+.dealer__document__upload > .document__upload > div > span {
+  background-color: #56b124;
+  padding: 4px 7px;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.dealer__document__upload > button {
+  margin: 0 10px;
+  padding: 13px 50px;
+  background-color: #56b124;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  border: none !important;
+  outline: none !important;
+  transition: 0.3s;
+  margin-top: 50px;
+}
+.dealer__document__upload > button:hover {
+  background-color: #05242a;
+}
+
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  /* dealer document upload */
+  .dealer__document__upload > .document__upload > div {
+    width: 27%;
+    margin: 20px 10px;
+    max-width: none;
+  }
+  .dealer__document__upload > .document__upload > div > img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  /* dealer document upload */
+  .dealer__document__upload > .document__upload > div {
+    width: 35%;
+    margin: 20px 10px;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* dealer document upload */
+  .dealer__document__upload > .document__upload > div {
+    width: 70%;
+  }
+  .dealer__document__upload > button {
+    margin-top: 30px;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  /* dealer document upload */
+  .dealer__document__upload > .document__upload > div {
+    width: 80%;
+  }
+}

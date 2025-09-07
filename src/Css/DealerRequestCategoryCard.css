@@ -1,0 +1,59 @@
+.dealer__request__category__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 10px;
+  width: 25%;
+  max-width: 280px;
+}
+.dealer__request__category__card > img {
+  width: 100px;
+  height: 100px;
+}
+.dealer__request__category__card > h1 {
+  color: #555555;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.dealer__request__category__card > p {
+  margin-top: 10px;
+}
+.dealer__request__category__card > span {
+  font-weight: bold;
+  color: #56b124;
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+
+/* 1024px */
+@media only screen and (max-width: 1024px) {
+  .dealer__request__category__card {
+    width: 28%;
+    max-width: none;
+  }
+}
+
+/* 768px */
+@media only screen and (max-width: 768px) {
+  .dealer__request__category__card {
+    width: 40%;
+  }
+}
+
+/* 480px */
+@media only screen and (max-width: 480px) {
+  .dealer__request__category__card {
+    width: 75%;
+  }
+}
+
+/* 360px */
+@media only screen and (max-width: 360px) {
+  .dealer__request__category__card {
+    width: 85%;
+  }
+}
